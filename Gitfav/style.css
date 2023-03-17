@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-body: #000000;
+    --bg-button-favorite: #065E7C;
+    --bg-th-table:#092D38;
+    --bg-line-table-odd: rgba(6,22,27,0.5);
+    --bg-line-table-even: #06181C;
+    --ff-body: 'Roboto';
+    --color-border-table:#4A808C;
+
+
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--bg-body);
+    font-family: var(--ff-body);
+}
+
+.page {
+    max-width: 112rem;
+    margin: 11.5rem auto 0;
+
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8.7rem;
+}
+
+.sr-only{
+    color:white;
+    position:absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width:0 ;
+    
+}
+
+.search {
+    display: flex;
+    gap:.8rem
+}
+
+.searchUser {
+    width: 46.2rem;
+    height: 4.8rem;
+    padding: 1.6rem;
+    border-radius: .5rem;
+    background-color: var(--bg-line-table-odd);
+    border: none;
+    color:white;
+    font-family: var(--ff-body);
+    font-size: 1.6rem;
+}
+
+.searchUser::placeholder {
+    color: #7C7C8A;
+}
+
+.addFavorite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:.8rem;
+
+    width: 17rem ;
+    height: 4.8rem;
+
+    font-family: var(--ff-body);
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    padding: 1.6rem;
+    background-color: var(--bg-button-favorite);
+    color:white;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.addFavorite:hover, .addFavorite:hover path {
+    background-color: white;
+    color:var(--bg-button-favorite);
+    fill: var(--bg-button-favorite);
+}
+
+.table-scroll {
+    width: 100%;
+    max-height: 63.8rem;
+    overflow-y: scroll;
+}
+
+.table-scroll::-webkit-scrollbar{
+    width: 0.6rem;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--color-border-table);
+    border-radius: 5px;
+}
+
+
+table {
+    width: 100%;
+    
+    
+    border: 1px solid var(--color-border-table);
+    border-spacing: 0;
+    border-radius: 1.2rem;
+    overflow: hidden;
+        
+}
+
+table th {
+    color:white;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--ff-body),sans-serif;
+    background-color: var(--bg-th-table);
+    text-align: left;
+    height: 6.4rem;
+    padding: 1.6rem 0 1.6rem 4.0rem;
+   
+   
+}
+
+table th:first-child {
+    width: 50.4rem;
+    border-radius: 1.2rem 0 0 0;
+    
+}
+
+table th:last-child {
+    border-radius: 0 1.2rem 0 0;
+}
+
+tbody {
+    color:white;
+    text-align: left;
+   
+   
+}
+
+tbody td{
+    padding-left: 4rem;
+    font-weight: bold;
+      
+}
+
+tbody tr:nth-child(odd){
+    background-color: var(--bg-line-table-odd);
+
+}
+
+
+tbody tr:nth-child(even){
+    background-color: var(--bg-line-table-even);
+    
+    
+    
+    
+}
+
+tbody tr:nth-child(even) td{
+    border-top: 1px solid var(--color-border-table);
+    border-bottom: 0.5px solid #274b53;
+}
+
+tbody .User{
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    padding: 2.4rem 0 2.4rem 4.0rem;
+}
+
+tbody .User img{
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+}
+
+tbody .User a{
+    text-decoration: none;
+    color:white;
+}
+
+tbody .User p{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--ff-body);
+    margin-bottom: .8rem;
+}
+
+tbody .User span {
+    font-size: 1.7rem;
+    font-weight: lighter;
+
+}
+
+.Remove button {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--ff-body);
+    background:none;
+    border: none;
+    color:#F75A68;
+    cursor: pointer;
+}
+
+.hide-table {
+    display: none;
+}
+
+
+.table-no-content {
+    width: 100%;
+    height: 55rem;
+}
+
+.no-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:6rem;
+}
+
+.no-content h1 {
+    color:#4E5455;
+    font-family: var(--ff-body);
+    font-size: 4rem;
+    padding-top: 3rem;
+}
+
+
+
+
+
+
